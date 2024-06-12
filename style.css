@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffe6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  color: #ff4d4d;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e63939;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: #ff4d4d;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  h1 {
+      font-size: 2rem;
+  }
+
+  button {
+      padding: 10px 20px;
+      font-size: 0.875rem;
+  }
+
+  #message {
+      font-size: 1.5rem;
+  }
+}
