@@ -6,10 +6,13 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  overflow: hidden;
 }
 
 .container {
   text-align: center;
+  position: relative;
+  z-index: 10;
 }
 
 h1 {
@@ -45,6 +48,31 @@ button:hover {
   display: none;
 }
 
+.emoji {
+  font-size: 3rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s;
+}
+
+.emoji:hover {
+  transform: scale(1.2);
+}
+
+.rose {
+  position: absolute;
+  top: -50px;
+  font-size: 2rem;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  to {
+      transform: translateY(100vh);
+      opacity: 0;
+  }
+}
+
 @media (max-width: 600px) {
   h1 {
       font-size: 2rem;
@@ -57,5 +85,9 @@ button:hover {
 
   #message {
       font-size: 1.5rem;
+  }
+
+  .emoji {
+      font-size: 2.5rem;
   }
 }
